@@ -1,14 +1,11 @@
 import React from 'react';
-import styles from './ApodContainer.css';
-import classNames from 'classnames/bind';
+import './ApodContainer.css';
 import PropTypes from 'prop-types';
 
-const cx = classNames.bind(styles);
-
 const ApodContainer = ({ apod }) => (
-  <div className={cx('apod-container')}>
+  <div className={'apod-container'}>
     <header>APOD API in action!</header>
-    <div className={cx('apod-wrapper')}>{apod}</div>
+    <div className={'apod-wrapper'}>{apod}</div>
   </div>
 );
 

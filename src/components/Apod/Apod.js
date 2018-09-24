@@ -1,12 +1,9 @@
 import React from 'react';
-import styles from './Apod.css';
-import classNames from 'classnames/bind';
+import './Apod.css';
 import PropTypes from 'prop-types';
 
-const cx = classNames.bind(styles);
-
 const Apod = ({ url, explanation }) => (
-  <div className={cx('apod')}>
+  <div className={'apod'}>
     <img onClick={() => window.open(url)} src={url} alt="space" />
     <p> {explanation} </p>
   </div>
