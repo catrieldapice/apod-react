@@ -8,3 +8,6 @@
   font-size: 2rem;
   font-weight: 600;
   justify-content: center; }
+
+.apod-container img {
+  width: 5rem; }

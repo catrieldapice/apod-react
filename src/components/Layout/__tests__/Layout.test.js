@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ApodContainer from '../ApodContainer';
+import Layout from '../Layout';
 
-describe('<ApodContainer />', () => {
+describe('<Layout />', () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<ApodContainer />);
+    wrapper = shallow(<Layout />);
   });
   describe('render', () => {
     it('should render something', () => {
