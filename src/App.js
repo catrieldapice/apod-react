@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ApodContainer from './components/ApodContainer';
+import Apod from './components/Apod';
+
+import { getNasaApod } from './utils/api';
 
 class App extends Component {
+  state = {
+    date: null,
+    explanation: null,
+    title: null,
+    url: null,
+  };
+
+  componentDidMount() {
+    this.getApodResult();
+  }
+
+  getApodResult = async () => {
+    const response = await getNasaApod();
+    const { date, explanation, title, url } = response;
+
+    this.setState({
+      date,
+      explanation,
+      title,
+      url,
+    });
+  };
+
   render() {
+    const { explanation, title, url } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <ApodContainer
+          apod={<Apod url={url} explanation={explanation} title={title} />}
+        />
       </div>
     );
   }

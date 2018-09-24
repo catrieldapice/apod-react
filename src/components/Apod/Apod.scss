@@ -1,0 +1,15 @@
+.apod {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  flex-direction: column;
+  img {
+    display: block;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+}
