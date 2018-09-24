@@ -29,11 +29,9 @@ class App extends Component {
   render() {
     const { explanation, title, url } = this.state;
     return (
-      <div>
-        <Layout>
-          <Apod url={url} explanation={explanation} title={title} />
-        </Layout>
-      </div>
+      <Layout>
+        <Apod url={url} explanation={explanation} title={title} />
+      </Layout>
     );
   }
 }
