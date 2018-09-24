@@ -16,9 +16,7 @@ class App extends Component {
   }
 
   getApodResult = async () => {
-    const response = await getNasaApod();
-    const { explanation, title, url } = response;
-
+    const { explanation, title, url } = await getNasaApod();
     this.setState({
       explanation,
       title,
